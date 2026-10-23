@@ -1,0 +1,11 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[width=10cm,height=5.4cm,axis lines=middle,xmin=-7,xmax=7,ymin=-0.1,ymax=1.2,xtick={-6,-4,-2,2,4,6},ytick={0.5,1},xlabel={$x$},axis line style={icnavy!85!black,->},samples=120]
+\addplot[icnavy!50,dashed,domain=-7:7] {1}; 
+\addplot[icmag,line width=1.2pt,domain=-7:7] {1/(1+exp(-x))};
+\node[icmag,above left] at (axis cs:-1.0,0.3) {$\sigma(x)$};
+\end{axis}\end{tikzpicture}
+\end{document}

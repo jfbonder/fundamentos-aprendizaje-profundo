@@ -1,0 +1,29 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}
+\node[nodo] (n) at (3.4,0) {};
+\draw[icnavy,line width=0.6pt] (n.north)--(n.south); \node at ($(n)+(-0.2,0)$) {$\Sigma$}; \node[font=\scriptsize] at ($(n)+(0.2,0)$) {$S$};
+\node[entrada,label={left:$1$}] (e0) at (0,1.4) {};
+\node[nodo,minimum size=0.7cm] (e1) at (0,0.1) {$x_1$}; \node[nodo,minimum size=0.7cm] (e2) at (0,-1.2) {$x_2$};
+\draw[peso] (e0)--(n) node[pos=0.5,above right,etq]{$b$};
+\draw[peso] (e1)--(n) node[pos=0.5,above,etq]{$w_1$};
+\draw[peso] (e2)--(n) node[pos=0.5,below,etq]{$w_2$};
+\draw[->,line width=0.7pt,icnavy] (n.east)--++(0.8,0) node[right]{$y=S(w_1x_1+w_2x_2+b)$};
+\node[panel] at (3.4,-2.3) {a};
+\end{scope}
+\begin{scope}[xshift=9.6cm]
+\node[nodo] (u1) at (3.0,0.8) {$u_1$}; \node[nodo] (u2) at (3.0,-0.9) {$u_2$};
+\node[entrada,label={left:$1$}] (a0) at (0,2.1) {}; \node[entrada,label={left:$1$}] (a1) at (0,-2.2) {};
+\node[nodo,minimum size=0.7cm] (e1) at (0,0.7) {$x_1$}; \node[nodo,minimum size=0.7cm] (e2) at (0,-0.8) {$x_2$};
+\draw[peso] (a0)--(u1) node[pos=0.5,above,etq]{$b_1$}; \draw[peso] (a1)--(u2) node[pos=0.5,below,etq]{$b_2$};
+\draw[peso] (e1)--(u1) node[pos=0.35,above,etq]{$w_{11}$}; \draw[peso] (e1)--(u2) node[pos=0.25,left,etq,xshift=2pt]{$w_{12}$};
+\draw[peso] (e2)--(u1) node[pos=0.25,left,etq,xshift=2pt]{$w_{21}$}; \draw[peso] (e2)--(u2) node[pos=0.35,below,etq]{$w_{22}$};
+\draw[->,line width=0.7pt,icnavy] (u1.east)--++(0.9,0) node[right]{$y_1=\mathrm{softmax}(u_1,u_2)_1$};
+\draw[->,line width=0.7pt,icnavy] (u2.east)--++(0.9,0) node[right]{$y_2=\mathrm{softmax}(u_1,u_2)_2$};
+\node[panel] at (3.0,-3.0) {b};
+\end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\shade[bottom color=white,top color=icnavy] (-0.2,-1.2)--(4.8,-1.2)--(5.6,3.4)--(0.6,3.4)--cycle;
+\draw[icnavy!60] (-0.2,-1.2)--(4.8,-1.2)--(5.6,3.4)--(0.6,3.4)--cycle;
+\draw[white,line width=0.6pt,dashed] (0.55,2.55)--(5.55,2.55) node[right,etq,text=icnavy]{$c=2$};
+\draw[white,line width=0.6pt,dashed] (0.43,1.95)--(5.43,1.95) node[right,etq,text=icnavy]{$c=1$};
+\draw[icmag,line width=1.1pt] (0.26,1.10)--(5.26,1.10) node[right,etq,text=icnavy]{$c=0$};
+\draw[icnavy,line width=0.6pt,dashed] (0.08,0.20)--(5.08,0.20) node[right,etq,text=icnavy]{$c=-1$};
+\draw[icnavy,line width=0.6pt,dashed] (-0.06,-0.50)--(4.94,-0.50) node[right,etq,text=icnavy]{$c=-2$};
+
+\node[icnavy,font=\footnotesize] at (-1.0,2.6) {región $\mathcal G_1$};
+\node[icnavy,font=\footnotesize] at (-1.0,-0.6) {región $\mathcal G_2$};
+\draw[icnavy,line width=0.8pt,fill=white] (3.0,2.5) circle(0.42); \node[icnavy] at (3.0,2.5) {\bfseries 1};
+\draw[white,line width=0.8pt,fill=icnavy] (2.0,0.25) circle(0.42); \node[white] at (2.0,0.25) {\bfseries 2};
+\draw[icnavy,line width=0.8pt,fill=white] (3.7,-0.55) circle(0.16); \node[icnavy,font=\tiny] at (3.7,-0.55) {3};
+\draw[->,line width=0.8pt,icnavy] (7.6,1.0)--(9.0,1.0) node[midway,above]{$\sigma(c)$};
+\draw[eje] (9.6,-0.9)--(9.6,3.2);
+\foreach \y/\t in {-0.7/0,1.0/{0{,}5},2.7/1}{\draw (9.55,\y)--(9.65,\y) node[right,etq]{\t}; \fill[icmag] (9.6,\y) circle(1.6pt);}
+\end{tikzpicture}
+\end{document}

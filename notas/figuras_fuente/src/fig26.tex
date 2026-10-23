@@ -1,0 +1,37 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[xshift=0cm]
+\draw[eje] (0,0)--(5.2,0) node[right]{$x^{(0)}$}; \draw[eje] (0,0)--(0,3.3) node[above]{$Y$};
+\draw[icnavy,line width=0.9pt] plot[smooth] coordinates{(0.45,0.97) (0.96,1.45) (1.47,0.96) (1.98,1.57) (2.49,1.29) (3.01,1.36) (3.52,2.01) (4.03,1.58) (4.54,1.57) (5.05,1.83)};
+\fill[icmag] (0.45,0.97) circle(1.8pt);
+\fill[icmag] (0.96,1.45) circle(1.8pt);
+\fill[icmag] (1.47,0.96) circle(1.8pt);
+\fill[icmag] (1.98,1.57) circle(1.8pt);
+\fill[icmag] (2.49,1.29) circle(1.8pt);
+\fill[icmag] (3.01,1.36) circle(1.8pt);
+\fill[icmag] (3.52,2.01) circle(1.8pt);
+\fill[icmag] (4.03,1.58) circle(1.8pt);
+\fill[icmag] (4.54,1.57) circle(1.8pt);
+\fill[icmag] (5.05,1.83) circle(1.8pt);
+\node[panel] at (2.6,-0.8) {a};
+\end{scope}
+\begin{scope}[xshift=6.6cm]
+\draw[eje] (0,0)--(5.2,0) node[right]{$x^{(0)}$}; \draw[eje] (0,0)--(0,3.3) node[above]{$Y$};
+\draw[icnavy,line width=0.9pt] plot[smooth] coordinates{(0.30,0.80) (0.42,0.93) (0.54,0.99) (0.65,1.03) (0.77,1.06) (0.89,1.09) (1.01,1.12) (1.13,1.15) (1.24,1.17) (1.36,1.19) (1.48,1.21) (1.60,1.23) (1.72,1.25) (1.83,1.27) (1.95,1.29) (2.07,1.31) (2.19,1.32) (2.31,1.34) (2.42,1.36) (2.54,1.37) (2.66,1.39) (2.78,1.40) (2.89,1.42) (3.01,1.43) (3.13,1.44) (3.25,1.46) (3.37,1.47) (3.48,1.48) (3.60,1.49) (3.72,1.51) (3.84,1.52) (3.96,1.53) (4.07,1.54) (4.19,1.55) (4.31,1.56) (4.43,1.58) (4.55,1.59) (4.66,1.60) (4.78,1.61) (4.90,1.62)};
+\fill[icmag] (0.45,0.97) circle(1.8pt);
+\fill[icmag] (0.96,1.45) circle(1.8pt);
+\fill[icmag] (1.47,0.96) circle(1.8pt);
+\fill[icmag] (1.98,1.57) circle(1.8pt);
+\fill[icmag] (2.49,1.29) circle(1.8pt);
+\fill[icmag] (3.01,1.36) circle(1.8pt);
+\fill[icmag] (3.52,2.01) circle(1.8pt);
+\fill[icmag] (4.03,1.58) circle(1.8pt);
+\fill[icmag] (4.54,1.57) circle(1.8pt);
+\fill[icmag] (5.05,1.83) circle(1.8pt);
+\node[panel] at (2.6,-0.8) {b};
+\end{scope}
+\end{tikzpicture}
+\end{document}

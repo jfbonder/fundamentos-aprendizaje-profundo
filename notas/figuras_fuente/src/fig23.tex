@@ -1,0 +1,14 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\fill[cyanclaro] (0,0) -- (-130.000:2.4) arc(-130.000:50.000:2.4) -- cycle;
+\draw[icnavy,line width=0.8pt] (0,0) circle(2.4);
+\draw[icnavy,dashed] (1.736,2.068)--(-1.736,-2.068);
+\draw[icmag,dashed] (-0.515,2.650)--(0.515,-2.650);
+\draw[->,line width=1pt,icnavy] (0,0)--(1.149,-0.964) node[below right]{$\mathbf{w}_0$};
+\draw[->,line width=1pt,icmag] (0,0)--(1.472,0.286) node[right]{$\mathbf{w}_1=\mathbf{w}_0+\mathbf{x}_{i_0}$};
+\fill[icnavy] (1.272,-2.035) circle(2pt);\node[icnavy,font=\footnotesize] at (1.484,-2.375) {$P_n$};\fill[icnavy] (1.839,-1.543) circle(2pt);\fill[icnavy] (2.225,-0.899) circle(2pt);\fill[icnavy] (2.400,0.000) circle(2pt);\node[icnavy,font=\footnotesize] at (2.800,0.000) {$P_2$};\fill[icnavy] (2.225,0.899) circle(2pt);\node[icnavy,font=\footnotesize] at (2.596,1.049) {$P_1$};\fill[icnavy] (1.839,1.543) circle(2pt);\fill[icmag] (1.127,2.119) circle(2pt);\node[icmag,font=\footnotesize] at (1.315,2.472) {$P_{i_0}$};\draw[->,icmag!60,line width=0.5pt] (0,0)--(0.563,1.060) node[pos=0.55,left,etq]{$\mathbf{x}_{i_0}$};
+\end{tikzpicture}
+\end{document}

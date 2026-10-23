@@ -1,0 +1,30 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}\begin{scope}[xshift=0cm,scale=2.0]
+\clip (-0.7,-0.7) rectangle (1.8,1.8);
+\fill[cyanclaro] ({1.5-1.8},1.8)--(1.8,{1.5-1.8})--(1.8,1.8)--cycle;
+\draw[icnavy,line width=1.1pt] ({1.5+0.7},-0.7)--(-0.7,{1.5+0.7});
+\end{scope}
+\begin{scope}[xshift=0cm,scale=2.0]
+\draw[icnavy!70,line width=0.5pt] (0,0) rectangle (1,1);
+\fill[icnavy] (0,0) circle(0.03) (1,0) circle(0.03) (0,1) circle(0.03) (1,1) circle(0.03);
+\node[etq,below left] at (0,0) {$(0,0)$}; \node[etq,below right] at (1,0) {$(1,0)$}; \node[etq,above left] at (0,1) {$(0,1)$}; \node[etq,above right] at (1,1) {$(1,1)$};
+\node[etq,iccyan!50!black,fill=white,fill opacity=0.8,text opacity=1,inner sep=1pt] at (1.25,1.35) {$\{x_1+x_2\ge1{,}5\}$};
+\node[etq,iccyan!50!black,fill=white,fill opacity=0.8,text opacity=1,inner sep=1pt] at (0.2,0.45) {$\{x_1+x_2<1{,}5\}$};
+\node[panel] at (0.5,-1.0) {a};
+\end{scope}\begin{scope}[xshift=7.2cm,scale=2.0]
+\clip (-0.7,-0.7) rectangle (1.8,1.8);
+\fill[cyanclaro] ({0.5-1.8},1.8)--(1.8,{0.5-1.8})--(1.8,1.8)--cycle;
+\draw[icnavy,line width=1.1pt] ({0.5+0.7},-0.7)--(-0.7,{0.5+0.7});
+\end{scope}
+\begin{scope}[xshift=7.2cm,scale=2.0]
+\draw[icnavy!70,line width=0.5pt] (0,0) rectangle (1,1);
+\fill[icnavy] (0,0) circle(0.03) (1,0) circle(0.03) (0,1) circle(0.03) (1,1) circle(0.03);
+\node[etq,below left] at (0,0) {$(0,0)$}; \node[etq,below right] at (1,0) {$(1,0)$}; \node[etq,above left] at (0,1) {$(0,1)$}; \node[etq,above right] at (1,1) {$(1,1)$};
+\node[etq,iccyan!50!black,fill=white,fill opacity=0.8,text opacity=1,inner sep=1pt] at (0.95,1.3) {$\{x_1+x_2\ge0{,}5\}$};
+\node[etq,iccyan!50!black,fill=white,fill opacity=0.8,text opacity=1,inner sep=1pt] at (-0.1,-0.35) {$\{x_1+x_2<0{,}5\}$};
+\node[panel] at (0.5,-1.0) {b};
+\end{scope}\end{tikzpicture}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\tikzset{tq/.style={draw=icnavy!70,line width=0.7pt,fill=cyanclaro,minimum width=1.5cm,minimum height=0.8cm,rounded corners=3pt,inner sep=2pt,font=\small}}
+\node[tq] (A) at (-3.6,0) {azúcar}; \node[tq] (B) at (0,0) {agua}; \node[tq] (C) at (3.6,0) {vino};
+\node[tq] (D) at (-2.2,-2.2) {agua dulce}; \node[tq] (E) at (2.2,-2.2) {vino diluido};
+\node[tq] (F) at (0,-4.4) {cóctel};
+\foreach \n/\l in {A/A,B/B,C/C,D/D,E/E,F/F}{\node[icnavy,font=\bfseries\small] at ($(\n.west)+(-0.55,0)$) {$\l$};}
+\foreach \n/\x/\i in {A/-3.6/1,B/0/2,C/3.6/3}{\draw[->,iccyan,line width=0.9pt] (\x,1.5)--(\n.north) node[pos=0.3,right,iccyan!60!black]{$x_\i$};}
+\def\v#1#2#3{\fill[icmag] ($(#1)+(-0.09,0)$) rectangle ($(#1)+(0.09,0.18)$);\node[etq] at ($(#1)+(#2)$) {#3};}
+\draw[->,icnavy,line width=0.8pt] (A.south)--(-3.6,-1.1)--(D.north west) node[pos=0.55,left,etq]{$w_{11}$};
+\draw[->,icnavy,line width=0.8pt] (B.south)--(-1.4,-1.1)--(D.north) node[pos=0.6,above left,etq]{$w_{21}$};
+\draw[->,icnavy,line width=0.8pt] (B.south)--(1.4,-1.1)--(E.north) node[pos=0.6,above right,etq]{$w_{22}$};
+\draw[->,icnavy,line width=0.8pt] (C.south)--(3.6,-1.1)--(E.north east) node[pos=0.55,right,etq]{$w_{32}$};
+\draw[->,icnavy,line width=0.8pt] (D.south)--(-2.2,-3.3)--(-0.5,-3.3)--(-0.5,-3.95) node[pos=0.5,below,etq]{$u_1$};
+\draw[->,icnavy,line width=0.8pt] (E.south)--(2.2,-3.3)--(0.5,-3.3)--(0.5,-3.95) node[pos=0.5,below,etq]{$u_2$};
+\draw[->,iccyan,line width=0.9pt] (F.south)--(0,-5.6) node[midway,right,etq]{$u_3$} node[below]{salida};
+\end{tikzpicture}
+\end{document}

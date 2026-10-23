@@ -1,0 +1,32 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}
+\node[nodo,minimum size=0.7cm] (x1) at (0,1.0) {$x_1$}; \node[nodo,minimum size=0.7cm] (x2) at (0,-1.0) {$x_2$};
+\node[entrada,label={above:$1$}] (b1) at (2.7,2.4) {}; \node[entrada,label={above:$1$}] (b2) at (2.7,-2.4) {}; 
+\node[nodo,minimum size=0.85cm] (h1) at (3.0,1.0) {\escalon{1}}; \node[nodo,minimum size=0.85cm] (h2) at (3.0,-1.0) {\escalon{1}};
+\node[entrada,label={above:$1$}] (b3) at (5.9,1.8) {};
+\node[nodo,minimum size=0.85cm] (o) at (6.2,0) {\escalon{1}};
+\draw[peso] (x1)--(h1) node[pos=0.3,above,etq]{$1$}; \draw[peso] (x2)--(h1) node[pos=0.3,above left,etq]{$1$};
+\draw[peso] (x1)--(h2) node[pos=0.3,below left,etq]{$-1$}; \draw[peso] (x2)--(h2) node[pos=0.3,below,etq]{$-1$};
+\draw[peso] (b1)--(h1) node[pos=0.5,right,etq]{$-\tfrac12$}; \draw[peso] (b2)--(h2) node[pos=0.5,right,etq]{$\tfrac32$};
+\draw[peso] (h1)--(o) node[pos=0.5,above right,etq]{$1$}; \draw[peso] (h2)--(o) node[pos=0.5,below right,etq]{$1$};
+\draw[peso] (b3)--(o) node[pos=0.5,right,etq]{$-\tfrac32$};
+\draw[->,line width=0.7pt,icnavy] (o.east)--++(0.7,0) node[right]{$y$};
+\node[panel] at (3.0,-3.3) {a};
+\end{scope}
+\begin{scope}[xshift=10.5cm]
+\node[nodo,minimum size=0.7cm] (x) at (0,0) {$x$};
+\node[nodo,minimum size=0.9cm] (s1) at (3.0,0) {};  \draw[icnavy,line width=0.6pt] (s1.north)--(s1.south); \node at ($(s1)+(-0.2,0)$) {$\Sigma$}; \node at ($(s1)+(0.22,0)$) {$\sigma$};
+\node[nodo,minimum size=0.9cm] (s2) at (6.0,0) {}; \draw[icnavy,line width=0.6pt] (s2.north)--(s2.south); \node at ($(s2)+(-0.2,0)$) {$\Sigma$}; \node at ($(s2)+(0.22,0)$) {$\sigma$};
+\node[entrada,label={above:$1$}] (c1) at (2.5,1.7) {}; \node[entrada,label={above:$1$}] (c2) at (5.5,1.7) {};
+\draw[peso] (x)--(s1) node[midway,above,etq]{$w_1$}; \draw[peso] (c1)--(s1) node[midway,right,etq]{$b_1$};
+\draw[peso] (s1)--(s2) node[midway,above,etq]{$w_2$}; \draw[peso] (c2)--(s2) node[midway,right,etq]{$b_2$};
+\draw[->,line width=0.7pt,icnavy] (s2.east)--++(0.8,0) node[right]{$y$};
+\node[etq,below=3pt] at (s1.south) {$s^{(1)}\,|\,x^{(1)}$}; \node[etq,below=3pt] at (s2.south) {$s^{(2)}\,|\,y$};
+\node[panel] at (3.0,-3.3) {b};
+\end{scope}
+\end{tikzpicture}
+\end{document}

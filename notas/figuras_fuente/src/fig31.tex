@@ -1,0 +1,48 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[xshift=0cm]
+\node[entrada] (x) at (0,0) {};
+\node[nodo,minimum size=0.45cm] (h0) at (1.7,1.10) {};\draw[peso] (x)--(h0);
+\node[nodo,minimum size=0.45cm] (h1) at (1.7,0.40) {};\draw[peso] (x)--(h1);
+\node[nodo,minimum size=0.45cm] (h2) at (1.7,-0.40) {};\draw[peso] (x)--(h2);
+\node[nodo,minimum size=0.45cm] (h3) at (1.7,-1.10) {};\draw[peso] (x)--(h3);
+\node[nodo,minimum size=0.45cm] (o) at (3.4,0) {};
+\draw[peso] (h0)--(o);
+\draw[peso] (h1)--(o);
+\draw[peso] (h2)--(o);
+\draw[peso] (h3)--(o);
+\node[etq,below=2pt] at (o.south) {$A(x)$};
+\node[etq,left] at (x) {$x$};
+\end{scope}
+\begin{scope}[xshift=3.4cm]
+\node[entrada] (x) at (0,0) {};
+\node[nodo,minimum size=0.45cm] (h0) at (1.7,1.10) {};\draw[peso] (x)--(h0);
+\node[nodo,minimum size=0.45cm] (h1) at (1.7,0.40) {};\draw[peso] (x)--(h1);
+\node[nodo,minimum size=0.45cm] (h2) at (1.7,-0.40) {};\draw[peso] (x)--(h2);
+\node[nodo,minimum size=0.45cm] (h3) at (1.7,-1.10) {};\draw[peso] (x)--(h3);
+\node[nodo,minimum size=0.45cm] (o) at (3.4,0) {};
+\draw[peso] (h0)--(o);
+\draw[peso] (h1)--(o);
+\draw[peso] (h2)--(o);
+\draw[peso] (h3)--(o);
+\node[etq,below=2pt] at (o.south) {$A^2(x)$};
+\end{scope}
+\begin{scope}[xshift=6.8cm]
+\node[entrada] (x) at (0,0) {};
+\node[nodo,minimum size=0.45cm] (h0) at (1.7,1.10) {};\draw[peso] (x)--(h0);
+\node[nodo,minimum size=0.45cm] (h1) at (1.7,0.40) {};\draw[peso] (x)--(h1);
+\node[nodo,minimum size=0.45cm] (h2) at (1.7,-0.40) {};\draw[peso] (x)--(h2);
+\node[nodo,minimum size=0.45cm] (h3) at (1.7,-1.10) {};\draw[peso] (x)--(h3);
+\node[nodo,minimum size=0.45cm] (o) at (3.4,0) {};
+\draw[peso] (h0)--(o);
+\draw[peso] (h1)--(o);
+\draw[peso] (h2)--(o);
+\draw[peso] (h3)--(o);
+\node[etq,below=2pt] at (o.south) {$A^3(x)$};
+\end{scope}
+\node at (10.9,0) {$\cdots$};
+\end{tikzpicture}
+\end{document}

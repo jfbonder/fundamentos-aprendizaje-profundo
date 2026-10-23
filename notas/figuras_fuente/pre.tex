@@ -1,0 +1,32 @@
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,decorations.pathmorphing,patterns,3d,backgrounds,intersections,through}
+\definecolor{icnavy}{HTML}{013274}
+\definecolor{iccyan}{HTML}{029BDF}
+\definecolor{icmag}{HTML}{E2017B}
+\definecolor{dmred}{HTML}{A8000C}
+\definecolor{gris}{HTML}{6B7280}
+\definecolor{grisclaro}{HTML}{E5E7EB}
+\definecolor{cyanclaro}{HTML}{D6EEFB}
+\tikzset{
+  every picture/.style={>={Stealth[length=2.2mm,width=1.8mm]}, line cap=round, line join=round, font=\small},
+  tubo/.style={draw=icnavy!70, line width=0.7pt},
+  eje/.style={->, draw=icnavy!85!black, line width=0.6pt},
+  pt/.style={circle, fill=icnavy, inner sep=1.2pt},
+  ptm/.style={circle, fill=icmag, inner sep=1.2pt},
+  nodo/.style={circle, draw=icnavy, line width=0.7pt, minimum size=0.8cm, inner sep=0pt, fill=white},
+  entrada/.style={circle, fill=icnavy, inner sep=1.3pt},
+  peso/.style={->, draw=black!70, line width=0.5pt},
+  etq/.style={font=\footnotesize, inner sep=1pt},
+  panel/.style={font=\bfseries\small},
+}
+% neurona dividida: \neurona{nombre}{x,y}{izq}{der}
+\newcommand{\neurona}[4]{%
+  \node[circle,draw=icnavy,line width=0.8pt,minimum size=1.15cm,inner sep=0pt,fill=white] (#1) at (#2) {};
+  \draw[icnavy,line width=0.6pt] (#1.north)--(#1.south);
+  \node at ($(#1)+(-0.28,0)$) {#3};
+  \node at ($(#1)+(0.28,0)$) {#4};}
+% escalon de Heaviside miniatura
+\newcommand{\escalon}[1]{\begin{tikzpicture}[baseline=-0.5ex,scale=0.16,line width=0.5pt]\draw[black] (-1,-1)--(0,-1)--(0,1)--(1,1);\end{tikzpicture}}
+\newcommand{\lineal}{\begin{tikzpicture}[baseline=-0.5ex,scale=0.16,line width=0.5pt]\draw (-1,-1)--(1,1);\end{tikzpicture}}

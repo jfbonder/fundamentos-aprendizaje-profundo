@@ -1,0 +1,11 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\draw[icnavy!70] (-4.2,0)--(4.2,0);
+\foreach \r/\n in {1.0/1,2.0/2,3.2/3}{
+ \draw[icnavy,line width=0.9pt] (0,\r) circle(\r); \node[icnavy] at ({0.7*\r},{\r+0.7*\r}) {$B_\n$};}
+\draw[icnavy!50] (0,-0.5)--(0,6.9); \fill[icmag] (0,0) circle(2pt) node[below right,etq]{$0$};
+\end{tikzpicture}
+\end{document}

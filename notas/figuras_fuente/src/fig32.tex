@@ -1,0 +1,28 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\node[nodo] (X0) at (0,2.2) {$X^{1}_0$}; \node[nodo] (Y0) at (4,2.2) {$Y^{1}_0$};
+\node[nodo] (X1) at (0,1.1) {$X^{2}_0$}; \node[nodo] (Y1) at (4,1.1) {$Y^{2}_0$};
+\node[nodo] (X2) at (0,0.0) {$\vdots$}; \node[nodo] (Y2) at (4,0.0) {$\vdots$};
+\node[nodo] (X3) at (0,-1.4) {$X^{N}_0$}; \node[nodo] (Y3) at (4,-1.4) {$Y^{N}_0$};
+\draw[icnavy!55,line width=0.5pt] (X0)--(Y0);
+\draw[icnavy!55,line width=0.5pt] (X0)--(Y1);
+\draw[icnavy!55,line width=0.5pt] (X0)--(Y2);
+\draw[icnavy!55,line width=0.5pt] (X0)--(Y3);
+\draw[icnavy!55,line width=0.5pt] (X1)--(Y0);
+\draw[icnavy!55,line width=0.5pt] (X1)--(Y1);
+\draw[icnavy!55,line width=0.5pt] (X1)--(Y2);
+\draw[icnavy!55,line width=0.5pt] (X1)--(Y3);
+\draw[icnavy!55,line width=0.5pt] (X2)--(Y0);
+\draw[icnavy!55,line width=0.5pt] (X2)--(Y1);
+\draw[icnavy!55,line width=0.5pt] (X2)--(Y2);
+\draw[icnavy!55,line width=0.5pt] (X2)--(Y3);
+\draw[icnavy!55,line width=0.5pt] (X3)--(Y0);
+\draw[icnavy!55,line width=0.5pt] (X3)--(Y1);
+\draw[icnavy!55,line width=0.5pt] (X3)--(Y2);
+\draw[icnavy!55,line width=0.5pt] (X3)--(Y3);
+\node[icnavy,above] at (2,2.7) {$w_{ij}=w_{ji}$};
+\end{tikzpicture}
+\end{document}

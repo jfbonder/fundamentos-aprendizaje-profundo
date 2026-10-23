@@ -1,0 +1,24 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\neurona{n1}{4.2,2.0}{$\Sigma$}{$\varphi$}
+\neurona{n2}{4.2,-1.8}{$\Sigma$}{$\varphi$}
+\neurona{n3}{9.0,0.1}{$\Sigma$}{$\varphi$}
+\foreach \y/\n/\j in {2.0/n1/1,-1.8/n2/2}{
+ \node[entrada,label={left:$x_0^{(0)}=1$}] (b\j) at (0,\y+1.1) {};
+ \node[entrada,label={left:$x_1^{(0)}=x_1$}] (p\j) at (0,\y) {};
+ \node[entrada,label={left:$x_2^{(0)}=x_2$}] (q\j) at (0,\y-1.1) {};
+ \draw[peso] (b\j)--(\n.north west) node[pos=0.5,above right,etq]{$w_{0\j}^{(1)}=b_\j^{(1)}$};
+ \draw[peso] (p\j)--(\n.west) node[pos=0.5,above,etq]{$w_{1\j}^{(1)}$};
+ \draw[peso] (q\j)--(\n.south west) node[pos=0.5,below,etq]{$w_{2\j}^{(1)}$};
+}
+\node[entrada,label={above:$x_0^{(1)}=1$}] (c0) at (6.3,3.6) {};
+\draw[peso] (c0)--(n3.north west) node[pos=0.55,above right,etq]{$w_{01}^{(2)}=b_1^{(2)}$};
+\draw[peso] (n1.east)--(n3.north west) node[pos=0.55,above right,etq]{$w_{11}^{(2)}$} node[pos=0.0,above right,etq]{$y_1=x_1^{(1)}$};
+\draw[peso] (n2.east)--(n3.south west) node[pos=0.55,below right,etq]{$w_{21}^{(2)}$} node[pos=0.0,below right,etq]{$y_2=x_2^{(1)}$};
+\draw[->,line width=0.7pt,icnavy] (n3.east)--++(1.0,0) node[right]{$y=x_1^{(2)}$};
+\node[etq,below=2pt] at (n1.south) {primera neurona}; \node[etq,below=2pt] at (n2.south) {segunda neurona}; \node[etq,below=2pt] at (n3.south) {neurona de salida};
+\end{tikzpicture}
+\end{document}

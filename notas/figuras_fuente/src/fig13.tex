@@ -1,0 +1,18 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\neurona{n}{4,0}{$\Sigma$}{$\varphi$}
+\node[entrada,label=left:$x_1$] (e1) at (0,1.2) {};
+\node[entrada,label=left:$x_2$] (e2) at (0,0) {};
+\node at (0,-0.8) {$\vdots$};
+\node[entrada,label=left:$x_n$] (en) at (0,-1.8) {};
+\node[entrada,label={left:$x_0=1$}] (e0) at (0,2.6) {};
+\draw[peso] (e0)--(n.north west) node[pos=0.5,above right,etq]{$w_0=b$};
+\draw[peso] (e1)--(n.150) node[pos=0.5,above,etq]{$w_1$};
+\draw[peso] (e2)--(n.west) node[pos=0.5,above,etq]{$w_2$};
+\draw[peso] (en)--(n.south west) node[pos=0.5,below,etq]{$w_n$};
+\draw[->,line width=0.7pt,icnavy] (n.east)--++(1.0,0) node[right]{$y=\varphi(\mathbf{w}\cdot\mathbf{x})$};
+\end{tikzpicture}
+\end{document}

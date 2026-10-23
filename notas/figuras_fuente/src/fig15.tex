@@ -1,0 +1,31 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}
+\clip (-2.4,-2.2) rectangle (2.6,2.3);
+\fill[cyanclaro] (-1.7,2.3)--(1.0,-2.2)--(2.6,-2.2)--(2.6,2.3)--cycle;
+\draw[icnavy,line width=1.1pt] (-1.7,2.3)--(1.0,-2.2);
+\end{scope}
+\draw[icnavy,line width=0.5pt] (-2.4,-2.2) rectangle (2.6,2.3);
+\draw[->,icmag,line width=1pt] (-0.35,0.1)--(0.85,0.82) node[right]{$\mathbf{w}$};
+\node at (1.7,1.1) {$1$}; \node at (-1.6,-0.7) {$0$};
+\node[font=\footnotesize,iccyan!50!black] at (1.55,-0.35) {$\{\mathbf{w}\cdot\mathbf{x}+b\ge0\}$};
+\node[font=\footnotesize,iccyan!50!black] at (-1.35,0.15) {$\{\mathbf{w}\cdot\mathbf{x}+b<0\}$};
+\node[font=\footnotesize,icnavy,fill=white,inner sep=1pt] at (-0.55,-1.7) {$\mathbf{w}\cdot\mathbf{x}+b=0$};
+\node[panel] at (0.1,-2.7) {a};
+\begin{scope}[xshift=6.4cm,x={(1cm,0cm)},y={(0.55cm,0.45cm)},z={(0cm,1cm)}]
+\fill[grisclaro,opacity=0.8] (-2,-2,0)--(2,-2,0)--(2,2,0)--(-2,2,0)--cycle;
+\fill[cyanclaro,opacity=0.9] (0,-2,1.6)--(2,-2,1.6)--(2,2,1.6)--(0,2,1.6)--cycle;
+\fill[iccyan!35] (0,-2,0)--(0,-2,1.6)--(0,2,1.6)--(0,2,0)--cycle;
+\draw[icnavy] (-2,-2,0)--(2,-2,0)--(2,2,0)--(-2,2,0)--cycle;
+\draw[icnavy] (0,-2,1.6)--(2,-2,1.6)--(2,2,1.6)--(0,2,1.6)--cycle;
+\draw[icnavy,line width=1pt] (0,-2,0)--(0,2,0) (0,-2,0)--(0,-2,1.6) (0,2,0)--(0,2,1.6);
+\draw[icnavy,dotted] (2,-2,0)--(2,-2,1.6) (2,2,0)--(2,2,1.6);
+\node[icnavy] at (-1,0.5,0.0) {$0$}; \node[icnavy] at (1,0.2,1.6) [above] {$1$};
+\draw[eje] (2,-2,0)--(3.2,-2,0) node[right]{$x_1$}; \draw[eje] (-2,2,0)--(-2,3.2,0) node[above]{$x_2$}; \draw[eje] (-2,-2,0)--(-2,-2,2.4) node[above]{$y$};
+\node[panel] at (0.2,-1,-1.2) {b};
+\end{scope}
+\end{tikzpicture}
+\end{document}

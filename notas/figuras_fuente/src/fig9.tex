@@ -1,0 +1,22 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[hide axis,view={55}{24},width=10cm,height=9cm,colormap={c}{color=(cyanclaro) color=(iccyan)},zmin=-0.3,zmax=3.2,clip=false]
+\addplot3[surf,domain=0:1.7,y domain=0:360,samples=10,samples y=40,opacity=0.55,draw=icnavy!35,z buffer=sort,shader=flat]({x*cos(y)},{x*sin(y)},{x^2});
+\addplot3[domain=0:360,samples=70,icmag,line width=1pt]({cos(x)},{sin(x)},{1});
+\addplot3[domain=0:360,samples=70,icmag,line width=1pt,dashed]({cos(x)},{sin(x)},{0});
+\addplot3[domain=0:360,samples=70,icnavy,line width=0.7pt,dashed]({0.5*cos(x)},{0.5*sin(x)},{0});
+\addplot3[domain=0:360,samples=70,icnavy,line width=0.7pt]({0.5*cos(x)},{0.5*sin(x)},{0.25});
+\addplot3[icnavy,dotted,line width=0.6pt] coordinates{(0.5,0,0)(0.5,0,0.25)};
+\addplot3[icnavy,dotted,line width=0.6pt] coordinates{(-0.5,0,0)(-0.5,0,0.25)};
+\addplot3[icnavy,dotted] coordinates{(1,0,0)(1,0,1)}; \addplot3[icnavy,dotted] coordinates{(-1,0,0)(-1,0,1)};
+\addplot3[only marks,mark=*,mark size=1.6pt,icnavy] coordinates{(0,0,0)};
+\addplot3[eje] coordinates{(-2,0,0)(2.3,0,0)}; \addplot3[eje] coordinates{(0,-2,0)(0,2.3,0)}; \addplot3[eje] coordinates{(0,0,0)(0,0,3.3)};
+\node[right] at (axis cs:2.3,0,0) {$x_1$}; \node[above] at (axis cs:0,2.3,0) {$x_2$}; \node[above] at (axis cs:0,0,3.3) {$z$};
+\node[icmag,right] at (axis cs:1.05,0,1.2) {$z=c$};
+\node[icnavy,below] at (axis cs:0,0.0,-0.05) {$\mathbf{x}^*$};
+\end{axis}
+\end{tikzpicture}
+\end{document}

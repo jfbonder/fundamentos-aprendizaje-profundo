@@ -1,0 +1,23 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[xshift=0cm,yshift=0cm]
+\draw[eje] (-2.2,0)--(2.4,0) node[right]{$x$}; \draw[eje] (0,-1.5)--(0,1.9);
+\draw[icnavy,line width=1.1pt] (-2,-1)--(0,-1) (0,1)--(2,1); \draw[icnavy,dotted] (0,-1)--(0,1); \node[etq,right] at (0,1.15) {1}; \node[etq,left] at (0,-1.15) {$-1$};\node[panel] at (0,-2.2){a};
+\end{scope}
+\begin{scope}[xshift=6.2cm,yshift=0cm]
+\draw[eje] (-2.2,0)--(2.4,0) node[right]{$x$}; \draw[eje] (0,-1.5)--(0,1.9);
+\draw[icnavy,line width=1.1pt] (-2,0)--(-1,0)--(-1,1.2)--(1,1.2)--(1,0)--(2,0); \node[etq,left] at (0,1.2) {1};\node[panel] at (0,-2.2){b};
+\end{scope}
+\begin{scope}[xshift=0cm,yshift=-4.4cm]
+\draw[eje] (-2.2,0)--(2.4,0) node[right]{$x$}; \draw[eje] (0,-1.5)--(0,1.9);
+\draw[icnavy,line width=1.1pt] (-2,0)--(-1,0)--(1,1.4)--(1,0)--(2,0); \draw[icnavy,dotted] (1,0)--(1,1.4);\node[panel] at (0,-2.2){c};
+\end{scope}
+\begin{scope}[xshift=6.2cm,yshift=-4.4cm]
+\draw[eje] (-2.2,0)--(2.4,0) node[right]{$x$}; \draw[eje] (0,-1.5)--(0,1.9);
+\draw[icnavy,line width=1.1pt] (-2,0)--(-1.4,0)--(0,1.4)--(1.4,0)--(2,0);\node[panel] at (0,-2.2){d};
+\end{scope}
+\end{tikzpicture}
+\end{document}

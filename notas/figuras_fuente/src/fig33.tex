@@ -1,0 +1,19 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\draw[icnavy,line width=0.8pt] (-1.4,-1.9)--(-1.4,1.9); \node[left] at (-1.4,0.0) {$[0,1]$};
+\node[entrada,label={left:$x$}] (x) at (0,0) {};
+\foreach \j/\y/\bl/\xl in {1/2.2/b_1/x_1,2/0.7/b_2/x_2,3/-1.9/b_N/x_N}{
+  \node[nodo,minimum size=1.0cm] (h\j) at (3.2,\y) {};
+  \draw[icnavy,line width=0.8pt] ($(h\j)+(-0.25,-0.18)$)--($(h\j)+(0,-0.18)$)--($(h\j)+(0,0.18)$)--($(h\j)+(0.25,0.18)$);
+  \draw[peso] (x)--(h\j) node[pos=0.55,above,etq]{$1$};
+  \node[entrada,label={above:$1$}] (u\j) at (1.9,\y+0.95) {}; \draw[peso] (u\j)--(h\j.north west) node[pos=0.5,above right,etq]{$\bl=-\xl$};
+}
+\node at (3.2,-0.6) {$\vdots$};
+\node[nodo] (o) at (6.8,0) {}; \draw[icnavy,line width=0.6pt] (o.north)--(o.south); \node at ($(o)+(0.21,0)$) {\lineal};
+\foreach \j/\c in {1/c_1,2/c_2,3/c_N}{\draw[peso] (h\j)--(o) node[pos=0.6,above,etq]{$\c$};}
+\draw[->,line width=0.7pt,icnavy] (o.east)--++(0.8,0) node[right]{$y=\sum c_i\,H(x-x_i)$};
+\end{tikzpicture}
+\end{document}

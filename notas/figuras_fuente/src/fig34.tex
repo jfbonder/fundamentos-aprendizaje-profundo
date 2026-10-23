@@ -1,0 +1,13 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[width=10cm,height=6.6cm,axis lines=middle,xmin=-4,xmax=4,ymin=-0.2,ymax=4.2,xlabel={$x$},ylabel={},xtick={-4,-2,0,2,4},ytick={0,1,2,3,4},legend pos=north west,legend style={draw=none,fill=none,font=\footnotesize},every axis plot/.append style={line width=0.9pt},axis line style={icnavy!85!black,->},samples=120]
+\addplot[black!70,dashed,domain=-4:4] {max(x,0)}; \addlegendentry{ReLU}
+\addplot[icmag,domain=-4:4] {1*ln(1+exp(x/1))}; \addlegendentry{$\alpha=1$}
+\addplot[iccyan,domain=-4:4] {0.5*ln(1+exp(x/0.5))}; \addlegendentry{$\alpha=0{,}5$}
+\addplot[icnavy,domain=-4:4] {0.25*ln(1+exp(x/0.25))}; \addlegendentry{$\alpha=0{,}25$}
+\addplot[dmred,domain=-4:4] {0.1*ln(1+exp(x/0.1))}; \addlegendentry{$\alpha=0{,}1$}
+\end{axis}\end{tikzpicture}
+\end{document}

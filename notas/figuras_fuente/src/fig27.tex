@@ -1,0 +1,95 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[xshift=0cm]
+\node[entrada] (L0_0) at (0.00,1.35) {};
+\node[entrada] (L0_1) at (0.00,0.45) {};
+\node[entrada] (L0_2) at (0.00,-0.45) {};
+\node[entrada] (L0_3) at (0.00,-1.35) {};
+\node[nodo,minimum size=0.55cm] (L1_0) at (1.70,1.35) {};
+\node[nodo,minimum size=0.55cm] (L1_1) at (1.70,0.45) {};
+\node[nodo,minimum size=0.55cm] (L1_2) at (1.70,-0.45) {};
+\node[nodo,minimum size=0.55cm] (L1_3) at (1.70,-1.35) {};
+\node[nodo,minimum size=0.55cm] (L2_0) at (3.40,0.00) {};
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_0)--(L2_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_1)--(L2_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_2)--(L2_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_3)--(L2_0);
+\draw[->,line width=0.7pt,icnavy] (L2_0.east)--++(0.6,0);
+\node[etq,below] at (0.00,-2.35) {entrada}; \node[etq,below] at (1.70,-2.35) {capa oculta}; \node[etq,below] at (3.40,-2.35) {salida};
+\node[panel] at (1.70,-3.4) {a};
+\end{scope}
+\begin{scope}[xshift=7.8cm]
+\node[entrada] (L0_0) at (0.00,1.35) {};
+\node[entrada] (L0_1) at (0.00,0.45) {};
+\node[entrada] (L0_2) at (0.00,-0.45) {};
+\node[entrada] (L0_3) at (0.00,-1.35) {};
+\node[nodo,minimum size=0.55cm] (L1_0) at (1.70,1.35) {};
+\node[nodo,minimum size=0.55cm] (L1_1) at (1.70,0.45) {};
+\node[nodo,minimum size=0.55cm] (L1_2) at (1.70,-0.45) {};
+\node[nodo,minimum size=0.55cm] (L1_3) at (1.70,-1.35) {};
+\node[nodo,minimum size=0.55cm] (L2_0) at (3.40,1.35) {};
+\node[nodo,minimum size=0.55cm] (L2_1) at (3.40,0.45) {};
+\node[nodo,minimum size=0.55cm] (L2_2) at (3.40,-0.45) {};
+\node[nodo,minimum size=0.55cm] (L2_3) at (3.40,-1.35) {};
+\node[nodo,minimum size=0.55cm] (L3_0) at (5.10,0.00) {};
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_0)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_1)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_2)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L0_3)--(L1_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_0)--(L2_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_0)--(L2_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_0)--(L2_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_0)--(L2_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_1)--(L2_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_1)--(L2_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_1)--(L2_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_1)--(L2_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_2)--(L2_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_2)--(L2_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_2)--(L2_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_2)--(L2_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_3)--(L2_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_3)--(L2_1);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_3)--(L2_2);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L1_3)--(L2_3);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L2_0)--(L3_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L2_1)--(L3_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L2_2)--(L3_0);
+\draw[peso,icnavy!45,->,shorten >=1pt,line width=0.4pt] (L2_3)--(L3_0);
+\draw[->,line width=0.7pt,icnavy] (L3_0.east)--++(0.6,0);
+\node[etq,below] at (0.00,-2.35) {entrada}; \node[etq,below] at (2.55,-2.35) {capas ocultas}; \node[etq,below] at (5.10,-2.35) {salida};
+\node[panel] at (2.55,-3.4) {b};
+\end{scope}
+\end{tikzpicture}
+\end{document}

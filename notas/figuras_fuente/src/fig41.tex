@@ -1,0 +1,15 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\draw[icnavy!70,fill=cyanclaro,line width=0.6pt] (0.00,2.30) ellipse (1.0 and 0.62); \node[left=1.1cm,icnavy] at (0.00,2.30) {$\mathcal{G}_{3}$};
+\fill[icnavy] (-0.20,2.10) circle(1.5pt);\fill[icnavy] (0.11,1.91) circle(1.5pt);\fill[icnavy] (-0.02,1.92) circle(1.5pt);\fill[icnavy] (0.19,2.33) circle(1.5pt);\fill[icnavy] (0.23,2.21) circle(1.5pt);\fill[icnavy] (0.07,2.25) circle(1.5pt);\draw[icnavy!70,fill=cyanclaro,line width=0.6pt] (0.20,0.70) ellipse (1.0 and 0.62); \node[left=1.1cm,icnavy] at (0.20,0.70) {$\mathcal{G}_{1}$};
+\fill[icnavy] (0.07,0.72) circle(1.5pt);\fill[icnavy] (-0.01,0.64) circle(1.5pt);\fill[icnavy] (0.32,0.71) circle(1.5pt);\fill[icnavy] (0.13,1.07) circle(1.5pt);\fill[icnavy] (0.21,0.60) circle(1.5pt);\fill[icnavy] (0.23,0.61) circle(1.5pt);\draw[icnavy!70,fill=cyanclaro,line width=0.6pt] (0.00,-0.90) ellipse (1.0 and 0.62); \node[left=1.1cm,icnavy] at (0.00,-0.90) {$\mathcal{G}_{2}$};
+\fill[icnavy] (-0.07,-0.96) circle(1.5pt);\fill[icnavy] (0.34,-0.90) circle(1.5pt);\fill[icnavy] (0.03,-0.79) circle(1.5pt);\fill[icnavy] (0.34,-0.94) circle(1.5pt);\fill[icnavy] (-0.11,-0.48) circle(1.5pt);\fill[icnavy] (-0.25,-0.96) circle(1.5pt);\draw[eje] (7.2,0.4)--(7.2,3.4) node[above]{$z_3$}; \draw[eje] (7.2,0.4)--(10.8,0.4) node[right,xshift=14pt]{$z_1$}; \draw[eje] (7.2,0.4)--(6.1,-1.1) node[below]{$z_2$};
+\draw[icmag,line width=0.8pt,fill=icmag!8] (9.90,0.40)--(6.40,-0.70)--(7.20,2.60)--cycle;
+\fill[icmag] (9.90,0.40) circle(2pt) node[below right,etq]{$A_1(1,0,0)$};\fill[icmag!70] (9.95,0.56) circle(1.1pt);\fill[icmag!70] (9.83,0.23) circle(1.1pt);\fill[icmag!70] (9.95,0.36) circle(1.1pt);\fill[icmag!70] (9.87,0.43) circle(1.1pt);\fill[icmag!70] (9.92,0.42) circle(1.1pt);\fill[icmag] (6.40,-0.70) circle(2pt) node[left,etq]{$A_2(0,1,0)$};\fill[icmag!70] (6.37,-0.61) circle(1.1pt);\fill[icmag!70] (6.51,-0.70) circle(1.1pt);\fill[icmag!70] (6.37,-0.65) circle(1.1pt);\fill[icmag!70] (6.43,-0.77) circle(1.1pt);\fill[icmag!70] (6.37,-0.63) circle(1.1pt);\fill[icmag] (7.20,2.60) circle(2pt) node[right,etq]{$A_3(0,0,1)$};\fill[icmag!70] (7.19,2.58) circle(1.1pt);\fill[icmag!70] (7.21,2.60) circle(1.1pt);\fill[icmag!70] (7.20,2.46) circle(1.1pt);\fill[icmag!70] (7.32,2.61) circle(1.1pt);\fill[icmag!70] (7.14,2.67) circle(1.1pt);\draw[->,icnavy!80,line width=0.6pt] (1.10,2.30) to[bend left=-8] (7.05,2.65);
+\draw[->,icnavy!80,line width=0.6pt] (1.30,0.70) to[bend left=12] (9.75,0.45);
+\draw[->,icnavy!80,line width=0.6pt] (1.10,-0.90) to[bend left=15] (6.25,-0.65);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}\begin{scope}[xshift=0cm]
+\neurona{n}{3.2,0}{$\Sigma$}{\escalon{1}}
+\node[entrada,label={left:$x_0=1$}] (e0) at (0,1.5) {};
+\node[entrada,label=left:$x_1$] (e1) at (0,0.2) {};
+\node[entrada,label=left:$x_2$] (e2) at (0,-1.1) {};
+\draw[peso] (e0)--(n.north west) node[pos=0.45,above right,etq]{$b=-1{,}5$};
+\draw[peso] (e1)--(n.west) node[pos=0.5,above,etq]{$w_1=1$};
+\draw[peso] (e2)--(n.south west) node[pos=0.5,below,etq]{$w_2=1$};
+\draw[->,line width=0.7pt,icnavy] (n.east)--++(0.9,0) node[right]{$y=x_1\wedge x_2$};
+\node[panel] at (3.2,-2.0) {a};
+\end{scope}\begin{scope}[xshift=8.6cm]
+\neurona{n}{3.2,0}{$\Sigma$}{\escalon{1}}
+\node[entrada,label={left:$x_0=1$}] (e0) at (0,1.5) {};
+\node[entrada,label=left:$x_1$] (e1) at (0,0.2) {};
+\node[entrada,label=left:$x_2$] (e2) at (0,-1.1) {};
+\draw[peso] (e0)--(n.north west) node[pos=0.45,above right,etq]{$b=-0{,}5$};
+\draw[peso] (e1)--(n.west) node[pos=0.5,above,etq]{$w_1=1$};
+\draw[peso] (e2)--(n.south west) node[pos=0.5,below,etq]{$w_2=1$};
+\draw[->,line width=0.7pt,icnavy] (n.east)--++(0.9,0) node[right]{$y=x_1\vee x_2$};
+\node[panel] at (3.2,-2.0) {b};
+\end{scope}\end{tikzpicture}
+\end{document}

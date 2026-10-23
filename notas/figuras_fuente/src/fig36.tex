@@ -1,0 +1,37 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}
+\fill[cyanclaro] (0.00,1.50) rectangle +(1.5,1.5); \node at (0.75,2.25) {$A_1$};
+\fill[icmag!12] (0.00,0.00) rectangle +(1.5,1.5); \node at (0.75,0.75) {$A_2$};
+\fill[iccyan!25] (1.50,1.50) rectangle +(1.5,1.5); \node at (2.25,2.25) {$A_3$};
+\fill[icmag!25] (1.50,0.00) rectangle +(1.5,1.5); \node at (2.25,0.75) {$A_4$};
+\draw[icnavy!70,line width=0.6pt] (0,0) rectangle (3,3) (1.5,0)--(1.5,3) (0,1.5)--(3,1.5);
+\draw[eje] (4.0,0.7)--(8.6,0.7) node[right]{$\mathbb{R}$}; 
+\fill[icnavy] (5.0,0.7) circle(1.8pt) node[below,etq]{$a_1$};
+\fill[icnavy] (6.0,0.7) circle(1.8pt) node[below,etq]{$a_2$};
+\fill[icnavy] (7.0,0.7) circle(1.8pt) node[below,etq]{$a_3$};
+\fill[icnavy] (8.0,0.7) circle(1.8pt) node[below,etq]{$a_4$};
+\draw[->,icnavy!80,line width=0.6pt] (0.75,2.55) to[bend left=33] (5.0,0.78);
+\draw[->,icnavy!80,line width=0.6pt] (0.75,1.05) to[bend left=41] (6.0,0.78);
+\draw[->,icnavy!80,line width=0.6pt] (2.25,2.55) to[bend left=49] (7.0,0.78);
+\draw[->,icnavy!80,line width=0.6pt] (2.25,1.05) to[bend left=57] (8.0,0.78);
+\node[etq,icnavy] at (5.2,2.9) {$f$}; \node[panel] at (4.5,-0.8) {a};
+\end{scope}
+\begin{scope}[xshift=10.8cm]
+\fill[cyanclaro] (0.00,1.50) rectangle +(1.5,1.5); \node at (0.75,2.25) {$A_1$};
+\fill[icmag!12] (0.00,0.00) rectangle +(1.5,1.5); \node at (0.75,0.75) {$A_2$};
+\fill[iccyan!25] (1.50,1.50) rectangle +(1.5,1.5); \node at (2.25,2.25) {$A_3$};
+\fill[icmag!25] (1.50,0.00) rectangle +(1.5,1.5); \node at (2.25,0.75) {$A_4$};
+\draw[icnavy!70,line width=0.6pt] (0,0) rectangle (3,3) (1.5,0)--(1.5,3) (0,1.5)--(3,1.5);
+\draw[eje] (4.2,0.2)--(8.2,0.2) node[right]{}; \draw[eje] (6.2,-0.3)--(6.2,3.0);
+\fill[icnavy] (4.90,2.50) circle(1.8pt) node[above right,etq]{$P_1$};\draw[->,icnavy!80,line width=0.6pt] (0.75,2.55) to[bend left=28] (4.85,2.55);
+\fill[icnavy] (5.00,0.80) circle(1.8pt) node[above right,etq]{$P_2$};\draw[->,icnavy!80,line width=0.6pt] (0.75,1.05) to[bend left=34] (4.95,0.85);
+\fill[icnavy] (7.60,2.00) circle(1.8pt) node[above right,etq]{$P_3$};\draw[->,icnavy!80,line width=0.6pt] (2.25,2.55) to[bend left=40] (7.55,2.05);
+\fill[icnavy] (7.20,0.50) circle(1.8pt) node[above right,etq]{$P_4$};\draw[->,icnavy!80,line width=0.6pt] (2.25,1.05) to[bend left=46] (7.15,0.55);
+\node[etq,icnavy] at (4.2,3.0) {$f$}; \node[panel] at (4.5,-0.8) {b};
+\end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\input{pre}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach \i/\y in {1/2.6,2/1.5,4/-1.9}{
+  \node[entrada] (e\i) at (0,\y) {};}
+\node[entrada,label=left:$1$] (u) at (0,3.7) {};
+\node[entrada,label=left:$1$] (d) at (0,-3.0) {};
+\node[left] at (e1) {$x_1$}; \node[left] at (e2) {$x_2$}; \node[left] at (e4) {$x_n$};
+\node at (0,-0.4) {$\vdots$};
+\node[nodo] (n1) at (3.6,2.6) {}; \node[nodo] (n2) at (3.6,0.8) {}; \node[nodo] (n3) at (3.6,-1.9) {};
+\node at (3.6,-0.5) {$\vdots$};
+\foreach \e in {e1,e2,e4}{\foreach \n in {n1,n2,n3}{\draw[peso,icnavy!35] (\e)--(\n);}}
+\draw[peso] (e1)--(n1) node[pos=0.55,above,etq]{$a_{11}$};
+\draw[peso] (e1)--(n2) node[pos=0.45,above,etq,xshift=2pt]{$a_{12}$};
+\draw[peso] (e4)--(n3) node[pos=0.5,below,etq]{$a_{nm}$};
+\draw[peso] (u)--(n1) node[pos=0.5,above,etq]{$b_1$};
+\draw[peso] (d)--(n3) node[pos=0.5,below,etq]{$b_m$};
+\foreach \n/\t in {n1/{L_1=\sum_{j=1}^na_{j1}x_j+b_1},n2/{L_2=\sum_{j=1}^na_{j2}x_j+b_2},n3/{L_m=\sum_{j=1}^na_{jm}x_j+b_m}}{
+ \draw[->,line width=0.7pt,icnavy] (\n.east)--++(0.7,0) node[right]{$\t$};}
+\end{tikzpicture}
+\end{document}
