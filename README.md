@@ -1,5 +1,7 @@
 # Fundamentos matemáticos del aprendizaje profundo
 
+**Sitio web:** https://jfbonder.github.io/fundamentos-aprendizaje-profundo/
+
 Material del curso optativo *Fundamentos matemáticos del aprendizaje profundo* (Departamento de Matemática, FCEN-UBA), a cargo de Julián Fernández Bonder.
 
 - `notas/` — notas de clase en español (LaTeX + PDF), con las figuras en `notas/Fig*.pdf` y sus fuentes TikZ en `notas/figuras_fuente/`.
