@@ -1,0 +1,28 @@
+Fundamentos matemáticos del aprendizaje profundo — prácticas, figuras y modificaciones originales
+© 2026 Julián Fernández Bonder (Instituto de Cálculo, IC–CONICET; Departamento
+de Matemática, FCEN–UBA)
+
+Las prácticas (texto de los cuadernos de notebooks), las figuras (notas/Fig*.pdf)
+y las modificaciones originales de las notas se distribuyen bajo la licencia
+Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional
+(CC BY-NC-SA 4.0).
+
+Esto significa que se puede copiar, redistribuir, adaptar y construir sobre
+este material, siempre que:
+  - se dé el crédito correspondiente al autor, con un enlace a la licencia e
+    indicando si se hicieron cambios (Atribución);
+  - no se use con fines comerciales (NoComercial);
+  - las obras derivadas se distribuyan con la misma licencia (CompartirIgual).
+
+Texto legal completo: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.es
+Resumen: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es
+
+Forma sugerida de citar:
+  J. Fernández Bonder, "Fundamentos matemáticos del aprendizaje profundo",
+  Departamento de Matemática, FCEN-UBA, 2026.
+  https://github.com/jfbonder/fundamentos-aprendizaje-profundo
+
+Excepciones: el texto adaptado de O. Calin, Deep Learning Architectures. A
+Mathematical Approach (Springer, 2020), que figura en notas/Notas-DL.tex, no
+está cubierto por esta licencia: conserva los derechos de su autor y de
+Springer (ver NOTICE.md). El código tiene licencia MIT (ver LICENSE-code).

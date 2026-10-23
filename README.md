@@ -22,6 +22,6 @@ Cada notebook corre en Google Colab (File → Open notebook → GitHub) o localm
 
 Las notas son una traducción y adaptación al español de partes de O. Calin, *Deep Learning Architectures. A Mathematical Approach*, Springer, 2020 (los capítulos 1–9 siguen los capítulos 1–9 del libro; el capítulo 10 sigue el capítulo 18), con correcciones, convenciones y figuras propias. **No se reclama autoría sobre el contenido del libro**; los derechos sobre el material original pertenecen a su autor y a Springer. Ver `NOTICE.md`.
 
-Las prácticas, el código, las figuras y las modificaciones originales de este repositorio se publican bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es) (texto legal en `LICENSE`; el código —celdas de los notebooks, fuentes TikZ y scripts— está bajo MIT, ver `LICENSE-CODE`). Esta licencia no se extiende al contenido adaptado de Calin.
+Las prácticas, las figuras y las modificaciones originales de este repositorio se publican bajo [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es) (ver `LICENSE-texto`); el código —celdas de los notebooks, fuentes TikZ y scripts— está bajo MIT, ver `LICENSE-code`. Estas licencias no se extienden al contenido adaptado de Calin (ver `LICENSE` y `NOTICE.md`).
 
 Parte de la revisión, las figuras y las prácticas se elaboraron con asistencia de herramientas de inteligencia artificial; el contenido es responsabilidad del docente. Se agradecen correcciones vía *issues* o *pull requests*.
